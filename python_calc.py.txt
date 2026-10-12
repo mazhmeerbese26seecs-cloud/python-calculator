@@ -1,0 +1,86 @@
+def addition():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    print("Result:", a + b)
+
+def subtraction():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    print("Result:", a - b)
+
+def multiplication():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    print("Result:", a * b)
+
+def division():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    if b == 0:
+        print("0 cannot be in the denominator, division error.")
+    else:
+        print("Result:", a / b)
+
+def even_odd():
+    number = int(input("Enter an integer: "))
+
+    if number % 2 == 0:
+        print("The number is Even.")
+    else:
+        print("The number is Odd.")
+
+def percentage():
+    a = float(input("Enter the number: "))
+    b = float(input("Enter the divisor: "))
+
+    if b == 0:
+        print("0 cannot be in the denominator, division error.")
+    else:
+        print("Percentage:", (a / b) * 100, "%")
+
+def exit_():
+    print("Exiting program")
+
+
+def invalid_choice():
+    print("The choice should exist between 1 and 7.")
+
+def calculator():
+    while True:
+        print("\nCalculator Menu")
+        print("Enter 1 for Addition")
+        print("Enter 2 for Subtraction")
+        print("Enter 3 for Multiplication")
+        print("Enter 4 for Division")
+        print("Enter 5 for Check Even/Odd")
+        print("Enter 6 for Calculate Percentage")
+        print("Enter 7 for Exit")
+
+        choice = input("Enter the functionality you want to perform (from 1 to 7): ")
+
+        if choice == "1":
+            addition()
+
+        elif choice == "2":
+            subtraction()
+
+        elif choice == "3":
+            multiplication()
+
+        elif choice == "4":
+            division()
+
+        elif choice == "5":
+            even_odd()
+
+        elif choice == "6":
+            percentage()
+
+        elif choice == "7":
+            exit_()
+            break
+
+        else:
+            invalid_choice()
+
+calculator()
